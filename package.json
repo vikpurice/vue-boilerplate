@@ -29,7 +29,7 @@
     "@tsconfig/node22": "^22.0.1",
     "@types/node": "^22.15.29",
     "@vitejs/plugin-vue": "^5.2.3",
-    "@vue/tsconfig": "^0.7.0",
+    "@vue/tsconfig": "^0.8.1",
     "eslint": "^9.39.1",
     "npm-run-all2": "^7.0.2",
     "typescript": "~5.8.0",

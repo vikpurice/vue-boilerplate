@@ -7,12 +7,12 @@ export const actions = {
 
   addToastMessage(
     this: SystemState,
-    type: ToastMessageType,
-    payload: string
+    message: string,
+    type: ToastMessageType = "SUCCESS"
   ): void {
     this.$patch({
       toastMessage: {
-        payload: payload,
+        payload: message,
         type: type,
       },
     });

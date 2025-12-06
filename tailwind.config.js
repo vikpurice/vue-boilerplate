@@ -1,8 +1,11 @@
+import animate from "tailwindcss-animate";
+
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+  darkMode: ["class"],
+  content: ["./components/**/*.{ts,tsx,vue}", "./src/**/*.{ts,tsx,vue}"],
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [animate],
 };

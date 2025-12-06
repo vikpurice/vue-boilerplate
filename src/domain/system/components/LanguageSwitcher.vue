@@ -5,7 +5,7 @@
       :key="lang.code"
       @click="switchLanguage(lang.code)"
       :class="{ active: currentLocale === lang.code }"
-      class="p-2 m-1 border-round"
+      class="p-2 m-1 rounded"
     >
       {{ $t(lang.nameKey) }}
     </button>

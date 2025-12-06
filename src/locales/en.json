@@ -1,13 +1,13 @@
 {
   "auth": {
     "login": {
-      "title": "Login",
+      "title": "Log in",
       "subtitle": "Enter your email and password",
       "email": "Email",
       "password": "Password",
       "emailPlaceholder": "Enter your email",
       "passwordPlaceholder": "Enter your password",
-      "loginButton": "Login",
+      "loginButton": "Log in",
       "forgotPasswordLink": "Did you forgot your password?",
       "emailRequired": "*Email is required",
       "passwordRequired": "*Password is required",
@@ -16,6 +16,9 @@
     "register": {
       "title": "Register",
       "subtitle": "Create an account to get started",
+      "username": "Username",
+      "usernamePlaceholder": "Enter your username",
+      "usernameRequired": "*Username is required",
       "registerButton": "Register"
     },
     "forgotPassword": {

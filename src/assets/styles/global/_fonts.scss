@@ -1,15 +1,22 @@
-// Fonts and sizes
 $ultrathin: 100;
 $thin: 300;
 $regular: 400;
 $semibold: 600;
 
-// Fontfaces
-$sans-fontface: "Outfit", sans-serif;
-$mono-fontface: "Inconsoloata";
+$primary-font: "Onest", sans-serif; // you can change this font to any sans-serif font.
 
-$sans-font-stack: $sans-fontface, Helvetica, Arial, sans-serif;
-$mono-font-stack: $mono-fontface, monospace;
+$mono-font: "Inconsolata", monospace;
 
-// Defaults
+$sans-font-stack: $primary-font, Helvetica, Arial, sans-serif;
+$mono-font-stack: $mono-font, monospace;
+
 $default-font-stack: $sans-font-stack;
+
+// Auto-generate weight utility classes for any font
+$font-weights: (100, 200, 300, 400, 500, 600, 700, 800, 900);
+
+@each $w in $font-weights {
+  .font-w#{$w} {
+    font-weight: $w;
+  }
+}

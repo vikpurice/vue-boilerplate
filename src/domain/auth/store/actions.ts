@@ -16,8 +16,8 @@ export const actions = {
         this.setAccountLogin(response.data);
       } else {
         store.systemStore.addToastMessage(
-          "ERROR",
-          "Service failed, please try again"
+          "Service failed, please try again",
+          "ERROR"
         );
       }
     } catch (error) {

@@ -16,6 +16,9 @@
     "register": {
       "title": "S'inscrire",
       "subtitle": "Créez un compte pour commencer",
+      "username": "Nom d'utilisateur",
+      "usernamePlaceholder": "Entrez votre nom d'utilisateur",
+      "usernameRequired": "*Le nom d'utilisateur est requis",
       "registerButton": "S'inscrire"
     },
     "forgotPassword": {

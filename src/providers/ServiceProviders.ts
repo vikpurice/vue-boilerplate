@@ -1,7 +1,5 @@
 import type { App } from "vue";
 import HTTPProvider from "./HTTPProvider";
-import UILibraryProvider from "./UILibraryProvider";
-import MessageProvider from "./MessageProvider";
 import LocalizationProvider from "./LocalizationProvider";
 
 class ServiceProviders {
@@ -10,13 +8,7 @@ class ServiceProviders {
     this.app = app;
   }
 
-  provide(
-    provider:
-      | HTTPProvider
-      | UILibraryProvider
-      | MessageProvider
-      | LocalizationProvider
-  ) {
+  provide(provider: HTTPProvider | LocalizationProvider) {
     provider.provide(this.app);
     return this;
   }
@@ -30,7 +22,5 @@ export {
   serviceProviders,
   ServiceProviders,
   HTTPProvider,
-  UILibraryProvider,
-  MessageProvider,
   LocalizationProvider,
 };

@@ -5,7 +5,7 @@
       :key="lang.code"
       @click="switchLanguage(lang.code)"
       :class="{ active: currentLocale === lang.code }"
-      class="p-2 m-1 rounded"
+      class="py-1 px-3 rounded-lg bg-white/10 text-white text-[0.875rem] cursor-pointer"
     >
       {{ $t(lang.nameKey) }}
     </button>
@@ -36,7 +36,7 @@ watch(locale, (newLocale) => {
 });
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .language-switcher {
   display: flex;
   gap: 0.5rem;
@@ -44,8 +44,6 @@ watch(locale, (newLocale) => {
 
 button {
   cursor: pointer;
-  background: none;
-  border: 1px solid #ccc;
 }
 
 button.active {

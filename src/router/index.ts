@@ -44,6 +44,7 @@ router.beforeEach(async (to, from, next) => {
       const store = useRootStore();
 
       const loginStatus = computed(() => store.authStore.getLogin.logged_in);
+
       if (loginStatus.value) {
         next();
         return;

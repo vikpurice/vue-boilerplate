@@ -2,7 +2,7 @@ import { http } from "@/providers/HTTPProvider";
 
 const loginService = async () => {
   return http
-    .get("/4fecaa48-1a2d-4746-8a76-6d910405f06f")
+    .get("/5a760c0a-92eb-4f40-b150-f7be750d9926")
     .then((response) => response.data);
 };
 

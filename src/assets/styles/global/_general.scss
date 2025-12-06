@@ -1,5 +1,10 @@
 @use "fonts" as *;
 
+/* Typography */
+* {
+  font-family: $default-font-stack;
+}
+
 /* Box sizing */
 *,
 ::before,
@@ -21,11 +26,6 @@ ol,
 ul {
   margin: 0;
   padding: 0;
-}
-
-/* Typography */
-body {
-  font-family: $default-font-stack;
 }
 
 /* Headings inherit font settings */

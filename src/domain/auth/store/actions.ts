@@ -1,4 +1,4 @@
-import type { AuthGenericData, AuthState } from "../types";
+import type { AuthGenericData, AuthState } from "@/domain/auth/types";
 import { loginService } from "@/domain/auth/service";
 import { useRootStore } from "@/stores/store";
 

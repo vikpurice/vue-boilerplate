@@ -2,7 +2,7 @@
   <div class="flex-1 p-6 flex flex-col overflow-y-auto">
     <!-- Search & Actions -->
     <div class="flex items-center justify-between mb-8 gap-4">
-      <div class="relative flex-1 max-w-md">
+      <div class="relative flex-1 max-w-xs">
         <Search
           class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/50"
         />
@@ -43,17 +43,15 @@
               {{ task.title }}
             </h3>
           </div>
-          <div
-            :class="getStatusColor(task.status)"
-            class="w-2 h-2 rounded-full ring-4 ring-white/5"
-          ></div>
         </div>
 
         <p class="text-white/60 text-sm line-clamp-2 leading-relaxed">
           {{ task.description }}
         </p>
 
-        <div class="mt-auto pt-4 flex items-center justify-between">
+        <div
+          class="mt-auto pt-4 flex items-center justify-between border-t border-white/10"
+        >
           <div class="flex -space-x-2">
             <div
               v-for="i in 3"
@@ -163,17 +161,6 @@ const filteredTasks = computed(() => {
       task.category.toLowerCase().includes(query)
   );
 });
-
-const getStatusColor = (status: string) => {
-  switch (status) {
-    case "in-progress":
-      return "bg-yellow-500 shadow-[0_0_10px_rgba(234,179,8,0.5)]";
-    case "done":
-      return "bg-green-500 shadow-[0_0_10px_rgba(34,197,94,0.5)]";
-    default:
-      return "bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.5)]";
-  }
-};
 
 const createNewTask = () => {
   // Placeholder for create task logic

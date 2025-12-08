@@ -24,6 +24,7 @@
 </template>
 <script setup>
 import { computed, ref } from "vue";
+import { ChevronDown } from "lucide-vue-next";
 import { useRootStore } from "@/stores/store";
 import { returnRandomHexColor } from "@/domain/system/helper";
 import LanguageSwitcher from "@/domain/system/components/LanguageSwitcher.vue";

@@ -1,22 +1,38 @@
 import { computed } from "vue";
 import { createRouter, createWebHistory } from "vue-router";
 import { useRootStore } from "@/stores/store";
-import Dashboard from "@/domain/dashboard/components/Dashboard.vue";
+
 import Auth from "@/domain/auth/components/Auth.vue";
 import NotFound from "@/domain/system/components/NotFound.vue";
 
 const requiresAuthRoutes = [
   {
     path: "/",
-    name: "Home",
-    component: Dashboard,
-    meta: { requiresAuth: true },
+    redirect: "/dashboard",
   },
   {
     path: "/dashboard",
-    name: "Dashboard",
-    component: Dashboard,
-    meta: { requiresAuth: true },
+    name: "DashboardHome",
+    component: () => import("@/domain/dashboard/components/Content.vue"),
+    meta: { requiresAuth: true, layout: "DashboardLayout" },
+  },
+  {
+    path: "/projects",
+    name: "Projects",
+    component: () => import("@/domain/dashboard/components/Projects.vue"),
+    meta: { requiresAuth: true, layout: "DashboardLayout" },
+  },
+  {
+    path: "/navigation",
+    name: "Navigation",
+    component: () => import("@/domain/dashboard/components/Navigation.vue"),
+    meta: { requiresAuth: true, layout: "DashboardLayout" },
+  },
+  {
+    path: "/settings",
+    name: "Settings",
+    component: () => import("@/domain/dashboard/components/Settings.vue"),
+    meta: { requiresAuth: true, layout: "DashboardLayout" },
   },
 ];
 const guestRoutes = [
@@ -24,10 +40,12 @@ const guestRoutes = [
     path: "/auth",
     name: "Auth",
     component: Auth,
+    meta: { layout: "AuthLayout" },
   },
   {
     path: "/:pathMatch(.*)*",
     component: NotFound,
+    meta: { requiresAuth: true },
   },
 ];
 

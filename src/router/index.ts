@@ -1,7 +1,6 @@
 import { computed } from "vue";
 import { createRouter, createWebHistory } from "vue-router";
 import { useRootStore } from "@/stores/store";
-
 import Auth from "@/domain/auth/components/Auth.vue";
 import NotFound from "@/domain/system/components/NotFound.vue";
 
@@ -45,7 +44,7 @@ const guestRoutes = [
   {
     path: "/:pathMatch(.*)*",
     component: NotFound,
-    meta: { requiresAuth: true },
+    meta: { requiresAuth: true, layout: "ErrorLayout" },
   },
 ];
 

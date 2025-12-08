@@ -12,9 +12,9 @@ A rock-solid foundation to build a SPA for your next project with Vue 3 with Typ
 
 ### UI & Styling
 
-- **PrimeVue** - Rich UI component library
 - **Tailwind CSS** - Utility-first CSS framework
-- **PrimeIcons** - Icon library
+- **Shadcn Vue** - Reusable components built with Radix Vue and Tailwind CSS
+- **Lucide Icons** - Beautiful & consistent icons
 - **SCSS** - Advanced styling capabilities
 
 ### Internationalization (i18n)
@@ -42,26 +42,28 @@ A rock-solid foundation to build a SPA for your next project with Vue 3 with Typ
 ```
 src/
 ├── domain/              # Feature-based modules
-│   ├── account/        # Authentication & user features
-│   │   ├── components/ # Login, Dashboard, ForgotPassword
-│   │   └── helper.ts   # Domain-specific utilities
+│   ├── auth/           # Authentication features
+│   │   ├── components/ # Login, Register, etc.
+│   │   ├── service/    # Auth API services
+│   │   ├── store/      # Auth state management
+│   │   └── types.ts    # Auth types
+│   ├── dashboard/      # Dashboard features
+│   │   ├── components/ # Dashboard widgets/views
+│   │   └── ...
 │   └── system/         # System-wide features
-│       ├── components/ # Header, Footer, LanguageSwitcher, NotFound
-│       ├── store/      # System state & subscribers
-│       └── helper.ts   # System utilities
+│       ├── components/ # Layouts, global UI elements
+│       ├── store/      # System state
+│       └── ...
 ├── locales/            # i18n translation files
 │   ├── en.json        # English translations
 │   └── fr.json        # French translations
 ├── providers/          # Service providers
 │   ├── HTTPProvider.ts          # Axios configuration
 │   ├── LocalizationProvider.ts  # i18n setup
-│   ├── MessageProvider.ts       # Toast notifications
-│   ├── UILibraryProvider.ts     # PrimeVue setup
 │   └── ServiceProviders.ts      # Provider orchestration
 ├── router/             # Vue Router configuration
 │   └── index.ts       # Routes & auth guards
-├── stores/            # Pinia stores
-│   └── store.ts       # Root store
+├── stores/            # Global Pinia stores
 ├── assets/            # Static assets & styles
 ├── App.vue            # Root component
 └── main.ts            # Application entry point
@@ -130,14 +132,12 @@ The boilerplate uses a custom provider pattern for service initialization:
 ```typescript
 serviceProviders(app)
   .provide(new HTTPProvider())
-  .provide(new UILibraryProvider())
-  .provide(new MessageProvider())
   .provide(new LocalizationProvider());
 ```
 
 ### Domain-Driven Structure
 
-Features are organized by domain (account, system) rather than by type, promoting better modularity and maintainability.
+Features are organized by domain (auth, dashboard, system) rather than by type, promoting better modularity and maintainability.
 
 ### Route Guards
 
@@ -206,13 +206,18 @@ const data = await http.post("/login", credentials);
 
 ## UI Components
 
-Using PrimeVue components:
+Using Shadcn Vue components (example):
 
 ```vue
+<script setup lang="ts">
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { toast } from "vue-sonner";
+</script>
+
 <template>
-  <Button label="Click me" @click="handleClick" />
-  <InputText v-model="value" placeholder="Enter text" />
-  <Toast />
+  <Button @click="toast('Event has been created')">Click me</Button>
+  <Input v-model="value" placeholder="Enter text" />
 </template>
 ```
 
@@ -238,6 +243,7 @@ const v$ = useVuelidate(rules, formFields);
 - **VSCode** with extensions:
   - [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) - Vue 3 language support
   - [TypeScript Vue Plugin](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin)
+  - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 
 > **Note**: Disable Vetur if installed (conflicts with Volar)
 

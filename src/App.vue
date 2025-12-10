@@ -1,5 +1,5 @@
 <template>
-  <Toaster />
+  <Toaster position="top-center" />
   <main class="bg-black/95 text-white/95">
     <component :is="layout">
       <RouterView />

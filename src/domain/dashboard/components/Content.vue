@@ -100,6 +100,9 @@ import { ref, computed } from "vue";
 import { Search, Plus, ClipboardList } from "lucide-vue-next";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { useSystemStore } from "@/domain/system/store/system";
+
+const store = useSystemStore();
 
 const searchQuery = ref("");
 
@@ -165,5 +168,6 @@ const filteredTasks = computed(() => {
 const createNewTask = () => {
   // Placeholder for create task logic
   console.log("Create new task");
+  store.addToastMessage("New task created");
 };
 </script>

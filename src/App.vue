@@ -12,7 +12,6 @@ import { computed, onMounted } from "vue";
 import { useRoute, RouterView } from "vue-router";
 import { createMessagingSubscriber } from "@/domain/system/store/subscribers";
 import { Toaster } from "@/components/ui/sonner";
-import DefaultLayout from "@/layouts/DefaultLayout.vue";
 import DashboardLayout from "@/layouts/DashboardLayout.vue";
 import AuthLayout from "@/layouts/AuthLayout.vue";
 import ErrorLayout from "@/layouts/ErrorLayout.vue";
@@ -24,7 +23,7 @@ const layout = computed(() => {
   if (layoutName === "DashboardLayout") return DashboardLayout;
   if (layoutName === "AuthLayout") return AuthLayout;
   if (layoutName === "ErrorLayout") return ErrorLayout;
-  return DefaultLayout;
+  return ErrorLayout;
 });
 
 onMounted(() => {

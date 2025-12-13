@@ -8,7 +8,6 @@ export const http: AxiosInstance = axios.create({
 
 export default class HTTPProvider {
   provide(app: App) {
-    // app.config.globalProperties.$http = http; // Optional: if you want to access it via this.$http in Options API
     this.boot();
   }
 

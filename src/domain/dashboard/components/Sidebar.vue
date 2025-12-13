@@ -3,7 +3,7 @@
     class="w-[60px] flex flex-col items-center py-4 border-r  border-white/10"
   >
     <div
-      class="w-6 h-6 rounded-lg flex items-center justify-center cursor-pointer hover:bg-white/20 transition-colors"
+      class="w-6 h-6 rounded-lg flex items-center justify-center cursor-pointer"
       @click="navigateTo('DashboardHome')"
     >
     <img src="@/assets/images/logo.png" style="width: 100%; height: 100%; object-fit: cover;"></img>

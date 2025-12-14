@@ -56,25 +56,19 @@ const router = createRouter({
 
 // auth guard
 router.beforeEach(async (to, from, next) => {
+  const loginStatus = localStorage.getItem("logged_in");
+
+  if (to.name === "Auth" && loginStatus) {
+    next({ name: "DashboardHome" });
+    return;
+  }
+
   if (to.matched.some((item) => item.meta.requiresAuth)) {
-    try {
-      const store = useRootStore();
-
-      const loginStatus = computed(() => store.authStore.getLogin.logged_in);
-
-      if (loginStatus.value) {
-        next();
-        return;
-      }
-      if (to.name !== "Auth") {
-        next({ name: "Auth" });
-        return;
-      } else {
-        next();
-      }
-    } catch (error) {
-      console.error("Error during route guard execution", error);
+    if (loginStatus) {
+      next();
+      return;
     }
+    next({ name: "Auth" });
   } else {
     next();
   }

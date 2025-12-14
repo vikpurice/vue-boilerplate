@@ -14,6 +14,8 @@ export const actions = {
 
       if (response.success && response.data) {
         this.setAccountLogin(response.data);
+        // temp solution (not recommended to save the authorization info in ls)
+        localStorage.setItem("logged_in", this.authGenericData.user_id);
       } else {
         store.systemStore.addToastMessage(
           "Service failed, please try again",

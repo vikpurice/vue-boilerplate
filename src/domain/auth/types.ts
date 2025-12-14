@@ -1,7 +1,8 @@
 export interface AuthGenericData {
-  logged_in: boolean;
-  is_admin: boolean;
+  user_id: string;
   user_name: string;
+  email: string;
+  roles: string[];
 }
 
 export interface AuthState {

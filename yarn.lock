@@ -681,15 +681,7 @@
     "@intlify/shared" "10.0.6"
     source-map-js "^1.0.2"
 
-"@intlify/message-compiler@11.2.8":
-  version "11.2.8"
-  resolved "https://registry.yarnpkg.com/@intlify/message-compiler/-/message-compiler-11.2.8.tgz#3d967c07a36a8d6060730c1d3a2d40e3caaf07b3"
-  integrity sha512-A5n33doOjmHsBtCN421386cG1tWp5rpOjOYPNsnpjIJbQ4POF0QY2ezhZR9kr0boKwaHjbOifvyQvHj2UTrDFQ==
-  dependencies:
-    "@intlify/shared" "11.2.8"
-    source-map-js "^1.0.2"
-
-"@intlify/message-compiler@^11.1.12":
+"@intlify/message-compiler@11.2.8", "@intlify/message-compiler@^11.1.12":
   version "11.2.8"
   resolved "https://registry.yarnpkg.com/@intlify/message-compiler/-/message-compiler-11.2.8.tgz#3d967c07a36a8d6060730c1d3a2d40e3caaf07b3"
   integrity sha512-A5n33doOjmHsBtCN421386cG1tWp5rpOjOYPNsnpjIJbQ4POF0QY2ezhZR9kr0boKwaHjbOifvyQvHj2UTrDFQ==
@@ -701,12 +693,6 @@
   version "10.0.6"
   resolved "https://registry.yarnpkg.com/@intlify/shared/-/shared-10.0.6.tgz#70dd93911b15b08194ba1e505fbc85545ff975e7"
   integrity sha512-2xqwm05YPpo7TM//+v0bzS0FWiTzsjpSMnWdt7ZXs5/ZfQIedSuBXIrskd8HZ7c/cZzo1G9ALHTksnv/74vk/Q==
-
-"@intlify/shared@11.2.8", "@intlify/shared@^11.1.10":
-  version "11.2.8"
-  resolved "https://registry.yarnpkg.com/@intlify/shared/-/shared-11.2.8.tgz#30815afda2acd859cefdbb97cf59e7f819f32611"
-  integrity sha512-l6e4NZyUgv8VyXXH4DbuucFOBmxLF56C/mqh2tvApbzl2Hrhi1aTDcuv5TKdxzfHYmpO3UB0Cz04fgDT9vszfw==
-
 
 "@intlify/shared@11.2.8", "@intlify/shared@^11.1.12":
   version "11.2.8"
@@ -956,10 +942,10 @@
     "@primeuix/utils" "^0.6.2"
     "@primevue/core" "4.5.4"
 
-"@rolldown/pluginutils@1.0.0-beta.53":
-  version "1.0.0-beta.53"
-  resolved "https://registry.yarnpkg.com/@rolldown/pluginutils/-/pluginutils-1.0.0-beta.53.tgz#c57a5234ae122671aff6fe72e673a7ed90f03f87"
-  integrity sha512-vENRlFU4YbrwVqNDZ7fLvy+JR1CRkyr01jhSiDpE1u6py3OMzQfztQU2jxykW3ALNxO4kSlqIDeYyD0Y9RcQeQ==
+"@rolldown/pluginutils@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@rolldown/pluginutils/-/pluginutils-1.0.1.tgz#e3fcee093fbb5ce765e1ad088ff4de2889f6f9be"
+  integrity sha512-2j9bGt5Jh8hj+vPtgzPtl72j0yRxHAyumoo6TNfAjsLB04UtpSvPbPcDcBMxz7n+9CYB0c1GxQFxYRg2jimqGw==
 
 "@rollup/pluginutils@^5.1.0":
   version "5.1.4"
@@ -1147,12 +1133,12 @@
     "@typescript-eslint/types" "8.28.0"
     eslint-visitor-keys "^4.2.0"
 
-"@vitejs/plugin-vue@^6.0.3":
-  version "6.0.3"
-  resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue/-/plugin-vue-6.0.3.tgz#b857c5dcbc5cfb30bf5d7f9d6e274afcca2d46d1"
-  integrity sha512-TlGPkLFLVOY3T7fZrwdvKpjprR3s4fxRln0ORDo1VQ7HHyxJwTlrjKU3kpVWTlaAjIEuCTokmjkZnr8Tpc925w==
+"@vitejs/plugin-vue@^6.0.9":
+  version "6.0.9"
+  resolved "https://registry.yarnpkg.com/@vitejs/plugin-vue/-/plugin-vue-6.0.9.tgz#d6a6d288dd307d086dbf8d3fcccb8c378c473a45"
+  integrity sha512-rD/MORlhaZMlXWW0rEn4FB4wMinWC0z/D7Ye160S5+Rs1mC8ZDAdcDp4SjKfUhG5t8q1ktcPVw4xuTkPRlzrSA==
   dependencies:
-    "@rolldown/pluginutils" "1.0.0-beta.53"
+    "@rolldown/pluginutils" "^1.0.1"
 
 "@volar/language-core@2.4.23":
   version "2.4.23"
